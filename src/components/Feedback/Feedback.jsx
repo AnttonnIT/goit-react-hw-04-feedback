@@ -32,9 +32,11 @@ export function Feedback() {
   const getOptions = () => {
     return Object.keys(optionsObject);
   };
+
   const countTotalFeedback = () => {
     return Object.values(optionsObject).reduce((acc, value) => acc + value, 0);
   };
+
   const countPositiveFeedbackPercentage = () => {
     return `${Math.round((good / totalFeedback) * 100)}%`;
   };
